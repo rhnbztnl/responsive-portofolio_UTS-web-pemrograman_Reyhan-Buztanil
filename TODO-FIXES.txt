@@ -1,0 +1,158 @@
+TODO LIST PERBAIKAN — Responsive Portfolio Website
+===================================================
+
+PRIORITAS: CRITICAL (harus diperbaiki)
+--------------------------------------
+1. [CRITICAL] main.js:33 — Selector Swiper Projects salah  ✅ DONE
+   File  : assets/js/main.js:33
+   Error : ".projects-container" (hyphen), harus ".projects__container"
+   Efek  : Swiper proyek tidak pernah initialize, slideshow mati total
+
+2. [CRITICAL] main.js:127 — Typo method getElLementById  ✅ DONE
+   File  : assets/js/main.js:127
+   Error : getElLementById (huruf L kapital), harus getElementById
+   Efek  : Fungsi scrollUp crash, tombol scroll-to-top tidak pernah muncul
+
+3. [CRITICAL] index.html:471,529 — Tag HTML tidak valid  ✅ DONE
+   File  : index.html:471,529
+   Error : <dov> dan </dov>, harus <div> dan </div>
+   Efek  : Browser tidak parsing dengan benar, section testimonial rusak
+
+4. [CRITICAL] styles.css:308 — Typo class CSS homepage  ✅ DONE
+   File  : assets/css/styles.css:308
+   Error : .hoem__container (kurang huruf 'm'), harus .home__container
+   Efek  : Layout home section kehilangan row-gap & padding
+
+PRIORITAS: HIGH (merusak styling/layout)
+------------------------------------------
+5. [HIGH] index.html:86 — Class section_border typo  ✅ DONE
+   File  : index.html:86
+   Error : section_border (single _), CSS punya .section__border (double __)
+   Efek  : Border bawah section tidak tampil
+
+6. [HIGH] index.html:188 — Class skills__containner typo  ✅ DONE
+   File  : index.html:188
+   Error : skills__containner (double 'n'), CSS punya .skills__container
+   Efek  : Layout grid skills section rusak
+
+7. [HIGH] index.html:278 — Class gird typo  ✅ DONE
+   File  : index.html:278
+   Error : gird, harus grid
+   Efek  : Qualification container tidak pakai grid layout
+
+8. [HIGH] index.html:477,492,507 — Class testimonial typo  ✅ DONE
+   File  : index.html:477,492,507
+   Error : testtimonial__description (triple 't'), CSS punya testimonial__description
+   Efek  : Styling paragraf testimonial tidak jalan
+
+9. [HIGH] index.html:547-548 — Class contact typo  ✅ DONE
+   File  : index.html:547-548
+   Error : contact__data__title / __info (double __), CSS punya contact__data-title / -info
+   Efek  : Styling informasi kontak (Email, dll) tidak jalan
+
+10. [HIGH] styles.css:635 — Malformed CSS variable  ✅ DONE
+    File  : assets/css/styles.css:635
+    Error : var(----title-color) (em-dash/extra dash), harus var(--title-color)
+    Efek  : Warna tombol tidak teraplikasi
+
+11. [HIGH] styles.css:1185 — CSS orphan .home__perfil  ✅ DONE
+    File  : assets/css/styles.css:1185
+    Error : .home__perfil (single 'l') — tidak ada di HTML (HTML pakai home__perfill)
+    Efek  : Responsive ukuran foto profil di layar 1200px+ tidak jalan
+
+12. [HIGH] index.html:103-111 — <a> di dalam <ul> tanpa <li>
+    File  : index.html:103-111
+    Error : <ul> hanya boleh punya child <li>, saat ini <a> langsung di dalam <ul>
+    Efek  : HTML tidak valid secara semantic
+
+13. [HIGH] index.html:606-616 — Sama: <a> di dalam <ul> + href kosong
+    File  : index.html:606-616
+    Error : Sama seperti #12, dan href="" (reload halaman saat diklik)
+    Efek  : HTML tidak valid, link tidak berguna
+
+PRIORITAS: MEDIUM (bug fungsionalitas)
+----------------------------------------
+14. [MEDIUM] index.html:580 — Duplikat atribut id  ✅ DONE
+    File  : index.html:580
+    Error : id="contact-project" muncul 2x di element yang sama
+    Efek  : HTML tidak valid
+
+15. [MEDIUM] styles.css:640 — CSS unit typo  ✅ DONE
+    File  : assets/css/styles.css:640
+    Error : lrem (huruf L), harus 1rem (angka 1)
+    Efek  : Font-size diabaikan browser
+
+16. [MEDIUM] styles.css:892,896 — HSL syntax error  ✅ DONE
+    File  : assets/css/styles.css:892,896
+    Error : hsl(4, 71%, 50) — kurang % di nilai lightness
+    Efek  : Warna tidak teraplikasi
+
+17. [MEDIUM] styles.css:941 — Pseudo-class typo  ✅ DONE
+    File  : assets/css/styles.css:941
+    Error : :hove (kurang 'r'), harus :hover
+    Efek  : Hover effect footer social link mati
+
+18. [MEDIUM] main.js:90 — alert() hanya pakai 1 argumen
+    File  : assets/js/main.js:90
+    Error : alert('OOPS! SOMETHING HAS FAILED...', error) — error object hilang
+    Efek  : Debugging error emailjs tidak mungkin
+
+19. [MEDIUM] main.js:79 — Tidak ada guard emailjs
+    File  : assets/js/main.js:79
+    Error : emailjs.sendForm() — jika CDN gagal load, ReferenceError
+    Efek  : Crash jika network error / ad blocker
+
+20. [MEDIUM] styles.css:1245-1247 — Duplicate .skills__info rule  ✅ DONE
+    File  : assets/css/styles.css:1245-1247
+    Error : .skills__info { gap: 3rem; } lalu .skills__info { gap: 2rem; }
+    Efek  : Yang pertama (gap: 3rem) tidak berguna, ter-override
+
+PRIORITAS: LOW (minor)
+------------------------
+21. [LOW] main.js:127 — Variable shadowing scrollUp
+    File  : assets/js/main.js:127
+    Error : const scrollUp (function) vs const scrollUp (inner variable) — nama sama
+    Efek  : Confusing code, risk of bugs
+
+22. [LOW] main.js:113 — CSS selector injection risk
+    File  : assets/js/main.js:113
+    Error : sectionId langsung dimasukkan ke querySelector tanpa escaping
+    Efek  : Potensi error jika ID mengandung karakter spesial CSS
+
+23. [LOW] index.html:22 — Comment mentah
+    File  : index.html:22
+    Error : <!-- 791 * 1280 untuk perfil --> — comment tidak perlu
+    Efek  : Tidak ada, hanya kebersihan kode
+
+24. [LOW] index.html:91 — Typo grammar  ✅ DONE
+    File  : index.html:91
+    Error : "Based In Indonesia" — 'In' seharusnya 'in' (lowercase)
+    Efek  : Tidak ada, hanya estetika
+
+25. [LOW] styles.css:623 — CSS variable capital L  ✅ DONE
+    File  : assets/css/styles.css:623
+    Error : var(--text-color-Light), definisi asli --text-color-light (lowercase)
+    Efek  : Variable lookup gagal
+
+26. [LOW] styles.css:300-305 — Comment blocks kosong  ✅ DONE
+    File  : assets/css/styles.css:300-305
+    Error : /* Show menu */ dan /* Active link */ tanpa CSS rule
+    Efek  : Hanya sampah kode
+
+27. [LOW] index.html:96 — Alt text typo
+    File  : index.html:96
+    Error : alt="home perfill" — seharusnya "home perfil" atau "profile photo"
+    Efek  : Tidak ada, hanya aksesibilitas
+
+CROSS-FILE INCONSISTENCIES (ringkasan)
+---------------------------------------
+- section_border vs section__border     → HTML vs CSS
+- skills__containner vs __container      → HTML vs CSS
+- home__perfill vs home__perfil          → HTML vs CSS (double vs single 'l')
+- testtimonial vs testimonial            → HTML vs CSS (triple 't')
+- contact__data__ vs contact__data-      → HTML vs CSS (__ vs -)
+- .projects-container vs __container     → JS vs HTML/CSS
+- getElLementById vs getElementById      → JS typo
+- gird vs grid                           → HTML typo
+- hoem vs home                           → CSS typo
+- bouce vs bounce                        → CSS keyframe typo

@@ -980,7 +980,7 @@ body.dark-theme {
 .scrollUp {
   position: fixed;
   right: 1rem;
-  bottom: 30%;
+  bottom: -30%;
   background-color: var(--body-color);
   box-shadow: 0 4px 12px hsla(207, 24%, 35%, .15);
   display: inline-flex;
