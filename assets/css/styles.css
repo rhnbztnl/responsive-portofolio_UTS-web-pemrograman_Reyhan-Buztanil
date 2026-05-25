@@ -596,6 +596,9 @@ body.dark-theme {
   opacity: 1;
 }
 
+.services__card p{
+  font-size: var(--small-font-size);
+}
 /*=============== PROJECTS ===============*/
 .projects__container{
   overflow: initial;
