@@ -616,12 +616,10 @@ body.dark-theme {
 .projects__content{
   display: grid;
   justify-content: center;
-  width: 100%;
 }
 
 .projects__img{ 
-  width: 100%;
-  max-width: 250px;
+  width: 250px; 
   border-radius: .75rem; 
   margin-bottom: 1.25rem;
 }
