@@ -637,7 +637,7 @@ body.dark-theme {
 }
 
 .projects__button i{ 
-  font-size: lrem; 
+  font-size: 1rem; 
   transition: transform .3s;
 }
 
@@ -889,11 +889,11 @@ body.dark-theme {
 
 /* Status color */
 .color-red{
-  color: hsl(4, 71%, 50);
+  color: hsl(4, 71%, 50%);
 }
 
 .color-blue{
-  color: hsl(207, 56%, 45);
+  color: hsl(207, 56%, 45%);
 }
 
 /*=============== FOOTER ===============*/
@@ -938,7 +938,7 @@ body.dark-theme {
   transition: transform .3s;
 }
 
-.footer__social:hove{
+.footer__social:hover{
   transform: translateY(-.15rem);
 }
 
