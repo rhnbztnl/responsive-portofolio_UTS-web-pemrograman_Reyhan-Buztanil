@@ -1157,7 +1157,7 @@ body.dark-theme {
   }
   
   .home__title {
-    font-size: 2.25rem;
+    font-size: 2.15rem;
   }
   
   .scrollUp {
@@ -1197,7 +1197,7 @@ body.dark-theme {
   }
 
   .home__title{
-    font-size: var(--biggest-font-size);
+    font-size: 2.25rem;
   }
 
   .home__blob{
