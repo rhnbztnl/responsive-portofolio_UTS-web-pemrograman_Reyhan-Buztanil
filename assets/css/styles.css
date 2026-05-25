@@ -1091,7 +1091,11 @@ body.dark-theme {
 /* For large devices */
 @media screen and (min-width: 1023px){
   .services__container{
-    grid-template-columns: repeat(3, max-content);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .services__card{
+    width: 100%;
   }
   .header{
     top: 0;
@@ -1279,7 +1283,6 @@ body.dark-theme {
   }
 
   .services__card{
-    width: 245px;
     height: auto;
     min-height: 345px;
     border-radius: 7.6rem;
@@ -1291,8 +1294,6 @@ body.dark-theme {
   }
 
   .services__border {
-    width: 265px;
-    height: 365px;
     border-radius: 8.25rem;
   }
 
