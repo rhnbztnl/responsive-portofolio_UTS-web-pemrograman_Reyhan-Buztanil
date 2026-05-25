@@ -1076,7 +1076,7 @@ body.dark-theme {
   }
 
   .projects__container{
-    width: 500px;
+    width: 580px;
   }
 
   .contact__form{
@@ -1174,6 +1174,10 @@ body.dark-theme {
   }
   .dark-theme .bg-header{
     box-shadow: 0 6px 24px hsla(207, 24%, 8%, .6);
+  }
+
+  .projects__container{
+    width: 700px;
   }
 }
 

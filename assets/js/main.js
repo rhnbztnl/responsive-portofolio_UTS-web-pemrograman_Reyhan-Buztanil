@@ -41,12 +41,16 @@ var swiperProjects = new Swiper(".projects__container", {
    pagination: {
       el: '.swiper-pagination',
    },
-   breakpoints: {
-      1200: {
-         slidesPerView: 2,
-         spaceBetween: 20,
-      },
-   },
+    breakpoints: {
+       767: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+       },
+       1200: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+       },
+    },
 });
 
 /*=============== SWIPER TESTIMONIAL ===============*/
