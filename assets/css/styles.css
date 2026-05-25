@@ -1049,6 +1049,7 @@ body.dark-theme {
 
   .skills__container,
   .services__container{
+    justify-content: center;
     column-gap: 5rem;
   }
 
