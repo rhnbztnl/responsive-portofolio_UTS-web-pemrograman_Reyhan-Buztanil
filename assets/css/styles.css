@@ -298,12 +298,6 @@ body.dark-theme {
 }
 
 
-/* Show menu */
-
-
-/* Active link */
-
-
 /*=============== HOME ===============*/
 .home__container{
   row-gap: 4rem;
@@ -620,7 +614,7 @@ body.dark-theme {
 
 .projects__subtitle{ 
   font-size: var(--small-font-size); 
-  color: var(--text-color-Light);
+  color: var(--text-color-light);
 }
 .projects__title{ 
   font-size: var(--h2-font-size); 
