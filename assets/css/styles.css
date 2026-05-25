@@ -568,6 +568,13 @@ body.dark-theme {
   transition: transform .8s;
 }
 
+.services__label{
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  margin-bottom: 1rem;
+}
+
 .services__title{
   font-size: var(--h2-font-size);
   font-weight: var(--font-semi-bold);
@@ -1082,6 +1089,9 @@ body.dark-theme {
 
 /* For large devices */
 @media screen and (min-width: 1023px){
+  .services__container{
+    grid-template-columns: repeat(3, max-content);
+  }
   .header{
     top: 0;
     bottom: initial;
@@ -1265,10 +1275,6 @@ body.dark-theme {
     width: 300px;
     left: -6rem;
     bottom: 5rem;
-  }
-
-  .services__container{
-    grid-template-columns: repeat(3, max-content);
   }
 
   .services__card{
