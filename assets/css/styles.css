@@ -552,10 +552,11 @@ body.dark-theme {
 .services__card{
   position: relative;
   width: 220px;
-  height: 322px;
+  height: auto;
+  min-height: 322px;
   background-color: var(--container-color);
   text-align: center;
-  padding: 3.5rem 1rem;
+  padding: 3.5rem 1rem 2rem;
   border-radius: 7.25rem;
   transition: background .3s;
 }
@@ -582,13 +583,13 @@ body.dark-theme {
 }
 
 .services__border{
-  width: 248px;
-  height: 342px;
+  width: calc(100% + 28px);
+  height: calc(100% + 20px);
   border: 1.8px solid var(--text-color-light);
   border-radius: 7.75rem;
   position: absolute;
   inset: 0;
-  left: -10px;
+  left: -14px;
   margin: auto;
   z-index: -1;
   transition: opacity .6s;
@@ -1279,9 +1280,10 @@ body.dark-theme {
 
   .services__card{
     width: 245px;
-    height: 345px;
+    height: auto;
+    min-height: 345px;
     border-radius: 7.6rem;
-    padding: 3.5rem 1.5rem;
+    padding: 3.5rem 1.5rem 2rem;
   }
 
   .services__card i {
