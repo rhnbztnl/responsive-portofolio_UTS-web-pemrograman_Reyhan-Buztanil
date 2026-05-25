@@ -32,6 +32,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 /*=============== SWIPER PROJECTS ===============*/
 var swiperProjects = new Swiper(".projects__container", {
    loop: true,
+   slidesPerView: 1,
    spaceBetween: 24,
 
    navigation: {
@@ -42,7 +43,7 @@ var swiperProjects = new Swiper(".projects__container", {
       el: '.swiper-pagination',
    },
     breakpoints: {
-       767: {
+       576: {
           slidesPerView: 2,
           spaceBetween: 24,
        },
