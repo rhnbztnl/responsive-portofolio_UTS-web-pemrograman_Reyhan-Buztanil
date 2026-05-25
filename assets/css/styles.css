@@ -632,7 +632,7 @@ body.dark-theme {
   display: inline-flex; 
   align-items: center; 
   column-gap: .5rem; 
-  color: var(-—-title-color); 
+  color: var(--title-color); 
   font-size: var(--small-font-size); 
 }
 
@@ -1182,7 +1182,7 @@ body.dark-theme {
     border-radius: 12.5rem;
   }
   
-  .home__perfil{
+  .home__perfill{
     width: 340px;
     height: 520px;
     border-radius: 10.6rem;
